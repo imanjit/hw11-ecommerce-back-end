@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
               attributes: ["id", "product_name", "price", "stock", "category_id"]
           }
       ]
-  }).then((tags) => res.status(200).json(tags));
+  }).then((tags) => res.status(200).json(tags))
     .catch((err) => res.status(500).json(err));
 });
 
