@@ -43,6 +43,7 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
+  console.log(req.body)
   Product.create(req.body).then((product) => {
         if (req.body.tagIds.length) {
             const productTagIdArr = req.body.tagIds.map((tag_id) => {
